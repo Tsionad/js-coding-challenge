@@ -11,9 +11,12 @@
 
 /**
  * Assumption array is sorted in asc order
- * Since array is already sorted use two runners with a for-loop
+ * Since array is already sorted use two runners (read and write pointers) with a for-loop
+ * If the two runners are duplicates, the fast runner will increment by 1
+ * If they are different, both runners move one step forward
+ * When the fast runner iterates through the entire array, the total number of distinct elements in the array will be the slow runner's current position in array plus 1 
  * Time Complexity: O(n) when n is the length of nums array
- * We're not using extra space/memory so space complexity is O(1)
+ * Space Complexity: O(1) since we're not using extra space/memory
  */
 
 /** 
@@ -24,20 +27,20 @@
 function removeDuplicates(nums) {
     // If there's no array return 0 
     if (!nums.length) return 0;
-    // Declare a variable current that is a slow runner and set it to 0
+    // Declare a variable current, the slow runner, and set it to 0
      let current = 0;
     
-    // Loop through array and increment i, the fast runner, if nums[current] = nums[current] to skip the duplicate
+    // Loop through array and increment i, the fast runner, if nums[current] = nums[i] to skip the duplicate
     for (let i = 1; i < nums.length; i++) {
         // if not a duplicate assign element at fast runner to element at current
         if (nums[i] !== nums[current]) {
             // increment slow runner
              current++;
-             // repeat the same process again until i reaches the end of array
+             // repeat the same process until i reaches the end of array
              nums[current] = nums[i];       
          }
      }
-     //return length of current
+     //return value of current + 1
      return current + 1;
 }
 
