@@ -1,7 +1,7 @@
 /*
  * @author: Tsion Adefres
- * @title: Remove Duplicates from Array
- * @description: Simple function to remove dupes in-place from sorted array
+ * @title: Longest consecutive elements in sequence
+ * @description: Simple function to find length of the longest consecutive sequence in unsorted array of integers
  */
 
 /**
@@ -20,7 +20,6 @@
  * Space Complexity: O(n) since we're not using extra space/memory
  */
   
-// HashSet for optimal time complexity
 function longestConsecutiveElements(arr) {
     if (arr == null || arr.length === 0) return 0;
     
