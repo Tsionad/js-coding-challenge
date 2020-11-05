@@ -10,7 +10,7 @@
  */
 
 /**
- * Assumption array is sorted in asc order
+ * Assumption: input array is sorted in asc order
  * Since array is already sorted use two runners (read and write pointers) with a for-loop
  * If the two runners are duplicates, the fast runner will increment by 1
  * If they are different, both runners move one step forward
