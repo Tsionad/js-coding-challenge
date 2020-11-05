@@ -10,8 +10,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# output from webpack
-dist/
-
 # jest coverage
 coverage/
+test-report.html
