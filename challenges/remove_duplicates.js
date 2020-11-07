@@ -5,11 +5,6 @@
  */
 
 /**
- * @param {number[]} nums
- * @return {number}
- */
-
-/**
  * Assumption: input array is sorted in asc order
  * Since array is already sorted use two runners (read and write pointers) with a for-loop
  * If the two runners are duplicates, the fast runner will increment by 1
@@ -21,10 +16,14 @@
 
 /** 
  * https://en.wikipedia.org/wiki/In-place_algorithm
- * https://jestjs.io/docs/en/configuration
  */
   
-function removeDuplicates(nums) {
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+
+const removeDuplicates = nums => {
     // If there's no array return 0 
     if (!nums.length) return 0;
     // Declare a variable current, the slow runner, and set it to 0
@@ -42,7 +41,7 @@ function removeDuplicates(nums) {
      }
      //return value of current + 1
      return current + 1;
-}
+};
 
 const test = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 console.log(removeDuplicates(test)); // 5
